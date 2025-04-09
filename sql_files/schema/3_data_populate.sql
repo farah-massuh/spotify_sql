@@ -1,0 +1,1 @@
+\copy spotify FROM '/Users/farahmassuh/Desktop/spotify_sql/csv_files/spotify.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
