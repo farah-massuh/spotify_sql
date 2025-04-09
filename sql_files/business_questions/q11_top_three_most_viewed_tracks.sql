@@ -1,5 +1,5 @@
 /*----------
-Q11. Find the top 3 most-viewed tracks for each artist
+Q11. Find the top three most-viewed tracks for each artist.
 ------------*/
 WITH artist_ranking AS (
     SELECT

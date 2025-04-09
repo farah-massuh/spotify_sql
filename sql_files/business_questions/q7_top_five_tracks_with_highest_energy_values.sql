@@ -1,5 +1,5 @@
 /*----------
-Q7. Find the top 5 tracks with the highest energy levels
+Q7. Find the top 5 tracks with the highest energy levels.
 ------------*/
 SELECT
     track,
