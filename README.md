@@ -32,7 +32,7 @@ All SQL files are located in `sql_files/schema/`.
 
 ## 📈 Business Questions & Insights
 
-### Q1. Retrieve the names of all tracks that have more than 1 billion streams.
+### ✅ Q1. Retrieve the names of all tracks that have more than 1 billion streams.
 ```sql
 SELECT 
    track, 
@@ -44,7 +44,7 @@ ORDER BY stream DESC;
 ![q1](images/q1.png)
 **Insight**: Identifies globally popular tracks with massive reach on Spotify.
 
-### Q2. Get the total number of comments for tracks where licensed = TRUE.
+### ✅ Q2. Get the total number of comments for tracks where licensed = TRUE.
 ```sql
 SELECT SUM(comments) num_comments_with_licensed_being_true
 FROM spotify
@@ -53,7 +53,7 @@ WHERE licensed = TRUE;
 ![q2](images/q2.png)
 **Insight**: Provides insights into user engagement (via comments) for officially licensed tracks.
 
-### Q3. List all albums along with their respective artists.
+### ✅ Q3. List all albums along with their respective artists.
 ```sql
 SELECT
     album,
@@ -64,7 +64,7 @@ GROUP BY 1, 2;
 ![q3](images/q3.png)
 **Insight**: Shows which artists are associated with each album, helpful for cataloging.
 
-### Q4. Find all tracks that belong to the album type single.
+### ✅ Q4. Find all tracks that belong to the album type single.
 ```sql
 SELECT track
 FROM spotify
@@ -73,7 +73,7 @@ WHERE album_type = 'single';
 ![q4](images/q4.png)
 **Insight**: Highlights tracks released as singles—often promotional or hit-focused.
 
-### Q5. Count the total number of tracks by each artist.
+### ✅ Q5. Count the total number of tracks by each artist.
 ```sql
 SELECT
     artist,
@@ -85,7 +85,7 @@ ORDER BY 2 DESC;
 ![q5](images/q5.png)
 **Insight**: Reveals the most prolific artists in the dataset.
 
-### Q6. Calculate the average danceability of tracks in each album.
+### ✅ Q6. Calculate the average danceability of tracks in each album.
 ```sql
 SELECT
     album,
@@ -97,7 +97,7 @@ ORDER BY 2 DESC;
 ![q6](images/q6.png)
 **Insight**: Indicates how danceable albums are on average—useful for mood or genre classification.
 
-### Q7. Find the top 5 tracks with the highest energy levels.
+### ✅ Q7. Find the top 5 tracks with the highest energy levels.
 ```sql
 SELECT
     track,
@@ -110,7 +110,7 @@ LIMIT 5;
 ![q7](images/q7.png)
 **Insight**: Identifies the most energetic tracks, useful for workout or hype playlists.
 
-### Q8. List all tracks along with their views and likes where official_video = TRUE.
+### ✅ Q8. List all tracks along with their views and likes where official_video = TRUE.
 ```sql
 SELECT
     track,
@@ -123,7 +123,7 @@ GROUP BY 1;
 ![q8](images/q8.png)
 **Insight**: Measures performance of tracks that also have official videos.
 
-### Q9. For each album, calculate the total views of all associated tracks.
+### ✅ Q9. For each album, calculate the total views of all associated tracks.
 ```sql
 SELECT
     album,
@@ -136,7 +136,7 @@ ORDER BY 3 DESC;
 ![q9](images/q9.png)
 **Insight**: Determines album popularity based on cumulative views.
 
-### Q10. Retrieve the track names that have been streamed on Spotify more than Youtube.
+### ✅ Q10. Retrieve the track names that have been streamed on Spotify more than Youtube.
 ```sql
 WITH tracks_played_count AS (
         SELECT
@@ -156,7 +156,7 @@ WHERE
 ![q10](images/q10.png)
 **Insight**: Shows which tracks perform better on Spotify compared to YouTube.
 
-### Q11. Find the top three most-viewed tracks for each artist.
+### ✅ Q11. Find the top three most-viewed tracks for each artist.
 ```sql
 WITH artist_ranking AS (
     SELECT
@@ -175,7 +175,7 @@ WHERE rank <= 3;
 ![q11](images/q11.png)
 **Insight**: Lists the most viewed tracks—key indicators of popularity.
 
-### Q12. Write a query to find tracks where the liveness score is above the average.
+### ✅ Q12. Write a query to find tracks where the liveness score is above the average.
 ```sql
 SELECT
     track,
@@ -190,7 +190,7 @@ WHERE liveness > (
 ![q12](images/q12.png)
 **Insight**: Identifies tracks with a strong "live performance" vibe.
 
-### Q13. Calculate the difference between the highest and lowest energy values for tracks in each album.
+### ✅ Q13. Calculate the difference between the highest and lowest energy values for tracks in each album.
 ```sql
 WITH album_max_low_energies AS (
     SELECT
@@ -210,7 +210,7 @@ ORDER BY 2 DESC;
 **Insight**: Measures the variability in energy levels across the dataset.
 
 
-## 🤔 Key Insights
+## 💡 Key Insights
 - Global Popularity Revealed: Multiple tracks exceeded one billion streams on Spotify, indicating massive global reach and audience engagement.
 - Licensing and Engagement Go Hand in Hand: Licensed tracks tend to receive more user interaction (e.g., comments), suggesting that official releases are more trusted and promoted.
 - Prolific Artists Identified: Certain artists contribute significantly more tracks to the platform, offering a strategic opportunity for label-focused marketing and promotion.
