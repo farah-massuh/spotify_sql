@@ -73,6 +73,7 @@ ORDER BY stream DESC;
 ![q1](images/q1.png)
 💡 **Insight**: Identifies globally popular tracks with massive reach on Spotify.
 
+
 ### ✅ Q2. Get the total number of comments where tracks are licensed.
 ```sql
 SELECT SUM(comments) num_comments_with_licensed_being_true
@@ -81,6 +82,7 @@ WHERE licensed = TRUE;
 ```
 ![q2](images/q2.png)
 💡 **Insight**: Provides insights into user engagement (via comments) for officially licensed tracks.
+
 
 ### ✅ Q3. List all albums along with their respective artists.
 ```sql
@@ -93,6 +95,7 @@ GROUP BY 1, 2;
 ![q3](images/q3.png)
 💡 **Insight**: Shows which artists are associated with each album, helpful for cataloging.
 
+
 ### ✅ Q4. Find all tracks that belong to the album type single.
 ```sql
 SELECT track
@@ -101,6 +104,7 @@ WHERE album_type = 'single';
 ```
 ![q4](images/q4.png)
 💡 **Insight**: Highlights tracks released as singles—often promotional or hit-focused.
+
 
 ### ✅ Q5. Count the total number of tracks by each artist.
 ```sql
@@ -114,6 +118,7 @@ ORDER BY 2 DESC;
 ![q5](images/q5.png)
 💡 **Insight**: Reveals the most prolific artists in the dataset.
 
+
 ### ✅ Q6. Calculate the average danceability of tracks in each album.
 ```sql
 SELECT
@@ -125,6 +130,7 @@ ORDER BY 2 DESC;
 ```
 ![q6](images/q6.png)
 💡 **Insight**: Indicates how danceable albums are on average—useful for mood or genre classification.
+
 
 ### ✅ Q7. Find the top 5 tracks with the highest energy levels.
 ```sql
@@ -139,6 +145,7 @@ LIMIT 5;
 ![q7](images/q7.png)
 💡 **Insight**: Identifies the most energetic tracks, useful for workout or hype playlists.
 
+
 ### ✅ Q8. List all tracks along with their views and likes with an existing official video.
 ```sql
 SELECT
@@ -152,6 +159,7 @@ GROUP BY 1;
 ![q8](images/q8.png)
 💡 **Insight**: Measures performance of tracks that also have official videos.
 
+
 ### ✅ Q9. For each album, calculate the total views of all associated tracks.
 ```sql
 SELECT
@@ -164,6 +172,7 @@ ORDER BY 3 DESC;
 ```
 ![q9](images/q9.png)
 💡 **Insight**: Determines album popularity based on cumulative views.
+
 
 ### ✅ Q10. Retrieve the track names that have been streamed on Spotify more than Youtube.
 ```sql
@@ -185,6 +194,7 @@ WHERE
 ![q10](images/q10.png)
 💡 **Insight**: Shows which tracks perform better on Spotify compared to YouTube.
 
+
 ### ✅ Q11. Find the top three most-viewed tracks for each artist.
 ```sql
 WITH artist_ranking AS (
@@ -204,6 +214,7 @@ WHERE rank <= 3;
 ![q11](images/q11.png)
 💡 **Insight**: Lists the most viewed tracks—key indicators of popularity.
 
+
 ### ✅ Q12. Write a query to find tracks where the liveness score is above the average.
 ```sql
 SELECT
@@ -218,6 +229,7 @@ WHERE liveness > (
 ```
 ![q12](images/q12.png)
 💡 **Insight**: Identifies tracks with a strong "live performance" vibe.
+
 
 ### ✅ Q13. Calculate the difference between the highest and lowest energy values for tracks in each album.
 ```sql
