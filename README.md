@@ -6,7 +6,6 @@ This project is a comprehensive SQL-based data analysis of Spotify music streami
 
 ## 📂 Table of Contents
 
-- [🎵 Project Overview](#-spotify-data-analysis-with-postgresql)
 - [🌟 Why This Project Is Important](#-why-this-project-is-important)
 - [📊 Dataset](#-dataset)
 - [🔧 Tools Used](#-tools-used)
